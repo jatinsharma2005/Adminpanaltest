@@ -8,7 +8,7 @@ require("dotenv").config();
 
 // Route Imports
 const authRoutes = require("./routes/auth");
-const employeeRoutes = require("./routes/employees");
+const employeeRoutes = require("./routes/Employees");
 const verifyToken = require("./middleware/verifyToken");
 
 const app = express(); // App instance
