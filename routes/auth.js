@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const Login = require("../models/User");
 const verifyToken = require("../middleware/verifyToken");
 const multer = require("multer");
-const Employee = require("../models/Employee");
+const Employee = require("../models/Employees");
 
 // --------------------------- REGISTER ---------------------------
 router.post("/register", async (req, res) => {
