@@ -34,6 +34,7 @@ router.post("/register", async (req, res) => {
 });
 
 // --------------------------- LOGIN ---------------------------
+// LOGIN
 router.post("/login", async (req, res) => {
   const { f_username, f_passward } = req.body;
 
@@ -52,9 +53,9 @@ router.post("/login", async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "Lax",
-      maxAge: 2 * 24 * 60 * 60 * 1000,
+      secure: process.env.NODE_ENV === "production", // true in prod (Render)
+      sameSite: "none", // for cross-site cookie with secure true
+      maxAge: 2 * 24 * 60 * 60 * 1000, // 2 days
     });
 
     res.json({ f_username: user.f_username });
