@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000", // Adjust to your frontend URL in production
+    origin: "https://adminpanalfront.vercel.app/", // Adjust to your frontend URL in production
     credentials: true, // Allow cookies to be sent cross-origin
   })
 );
